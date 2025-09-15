@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { StatusCodes } = require('http-status-codes');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+// API Health Check
+router.get('/health', (req, res) => {
+  res.status(StatusCodes.OK).json({
+    status: 'success',
+    message: 'User Management Service is running',
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+  });
 });
 
 module.exports = router;

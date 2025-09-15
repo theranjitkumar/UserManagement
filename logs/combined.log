@@ -1,0 +1,130 @@
+2025-09-16 00:54:11 [[31MERROR[39M] Error with email configuration: connect ECONNREFUSED ::1:587
+{
+  "service": "user-management-service",
+  "errno": -4078,
+  "code": "ESOCKET",
+  "syscall": "connect",
+  "address": "::1",
+  "port": 587,
+  "command": "CONN",
+  "stack": "Error: connect ECONNREFUSED ::1:587\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)"
+}
+2025-09-16 00:57:11 [[31MERROR[39M] Error with email configuration: connect ECONNREFUSED ::1:587
+{
+  "service": "user-management-service",
+  "errno": -4078,
+  "code": "ESOCKET",
+  "syscall": "connect",
+  "address": "::1",
+  "port": 587,
+  "command": "CONN",
+  "stack": "Error: connect ECONNREFUSED ::1:587\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)"
+}
+2025-09-16 00:57:16 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:16 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:18 [[32MINFO[39M] GET /favicon.ico
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:21 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:22 [[32MINFO[39M] GET /stylesheets/style.css
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
+2025-09-16 00:57:54 [[32MINFO[39M] GET /health
+{
+  "service": "user-management-service",
+  "query": {},
+  "ip": "::1"
+}
