@@ -3,7 +3,7 @@ const router = express.Router();
 const { StatusCodes } = require('http-status-codes');
 
 // API Health Check
-router.get('/health', (req, res) => {
+router.get('/', (req, res) => {
   res.status(StatusCodes.OK).json({
     status: 'success',
     message: 'User Management Service is running',
