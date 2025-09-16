@@ -34,6 +34,15 @@ const testConnection = async () => {
     }
 };
 
+// {force:true} || {alter: true}
+sequelize.sync()
+    .then(() => {
+        console.log('Database synchronized.');
+    })
+    .catch(err => {
+        console.error('Error synchronizing database:', err);
+    });
+
 module.exports = {
     sequelize,
     testConnection,

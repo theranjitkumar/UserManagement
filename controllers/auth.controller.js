@@ -35,7 +35,8 @@ exports.register = async (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(StatusCodes.BAD_REQUEST).json({
-        status: 'fail',
+        status: 'error',
+        message: 'Validation failed',
         errors: errors.array(),
       });
     }
