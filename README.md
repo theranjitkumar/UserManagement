@@ -69,9 +69,9 @@ POST /auth/register
 **Request Body:**
 ```json
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "kanjitkumar@yopmail.com",
+  "firstName": "Ranjit",
+  "lastName": "Kumar",
+  "email": "ranjitkumar@yopmail.com",
   "password": "Welcome@123",
   "role": "user"
 }
@@ -86,7 +86,7 @@ POST /auth/login
 **Request Body:**
 ```json
 {
-  "email": "kanjitkumar@yopmail.com",
+  "email": "ranjitkumar@yopmail.com",
   "password": "Welcome@123"
 }
 ```
@@ -99,7 +99,7 @@ POST /auth/forgot-password
 **Request Body:**
 ```json
 {
-  "email": "kanjitkumar@yopmail.com"
+  "email": "ranjitkumar@yopmail.com"
 }
 ```
 **Required Fields:** email
@@ -139,7 +139,7 @@ Authorization: Bearer <token>
 {
   "firstName": "Ranjit",
   "lastName": "Kumar",
-  "email": "kanjitkumar@yopmail.com"
+  "email": "ranjitkumar@yopmail.com"
 }
 ```
 **Optional Fields:** firstName, lastName, email
@@ -187,7 +187,7 @@ Authorization: Bearer <admin_token>
 {
   "firstName": "Ranjit",
   "lastName": "Kumar",
-  "email": "kanjitkumar@yopmail.com",
+  "email": "ranjitkumar@yopmail.com",
   "password": "Welcome@123",
   "role": "user"
 }
@@ -222,7 +222,7 @@ Authorization: Bearer <admin_token>
 {
   "firstName": "Ranjit",
   "lastName": "Kumar",
-  "email": "kanjitkumar@yopmail.com",
+  "email": "ranjitkumar@yopmail.com",
   "role": "admin",
   "isActive": true
 }
