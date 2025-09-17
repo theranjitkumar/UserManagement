@@ -53,20 +53,214 @@ A Node.js-based RESTful API for user management with authentication and authoriz
    ```
    The server will start on `http://localhost:3000` by default.
 
-## API Endpoints
+## API Documentation
+
+### Base URL
+```
+http://localhost:3000/api
+```
 
 ### Authentication
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - User login
-- `POST /api/auth/refresh-token` - Refresh access token
-- `POST /api/auth/logout` - User logout
 
-### Users
-- `GET /api/users` - Get all users (Admin only)
-- `GET /api/users/me` - Get current user profile
-- `GET /api/users/:id` - Get user by ID
-- `PUT /api/users/me` - Update current user profile
-- `DELETE /api/users/me` - Delete current user account
+#### Register a New User
+```
+POST /auth/register
+```
+**Request Body:**
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "kanjitkumar@yopmail.com",
+  "password": "Welcome@123",
+  "role": "user"
+}
+```
+**Required Fields:** firstName, lastName, email, password
+**Optional Fields:** role (default: 'user')
+
+#### User Login
+```
+POST /auth/login
+```
+**Request Body:**
+```json
+{
+  "email": "kanjitkumar@yopmail.com",
+  "password": "Welcome@123"
+}
+```
+**Required Fields:** email, password
+
+#### Forgot Password
+```
+POST /auth/forgot-password
+```
+**Request Body:**
+```json
+{
+  "email": "kanjitkumar@yopmail.com"
+}
+```
+**Required Fields:** email
+
+#### Reset Password
+```
+PATCH /auth/reset-password/:token
+```
+**Request Body:**
+```json
+{
+  "password": "Welcome@123",
+  "passwordConfirm": "Welcome@123"
+}
+```
+**Required Fields:** password, passwordConfirm
+
+#### Get Current User Profile
+```
+GET /auth/me
+```
+**Headers:**
+```
+Authorization: Bearer <token>
+```
+
+#### Update Current User
+```
+PATCH /auth/update-me
+```
+**Headers:**
+```
+Authorization: Bearer <token>
+```
+**Request Body:**
+```json
+{
+  "firstName": "Ranjit",
+  "lastName": "Kumar",
+  "email": "kanjitkumar@yopmail.com"
+}
+```
+**Optional Fields:** firstName, lastName, email
+
+#### Update Password
+```
+PATCH /auth/update-password
+```
+**Headers:**
+```
+Authorization: Bearer <token>
+```
+**Request Body:**
+```json
+{
+  "currentPassword": "Welcome@123",
+  "newPassword": "Welcome@123",
+  "passwordConfirm": "Welcome@123"
+}
+```
+**Required Fields:** currentPassword, newPassword, passwordConfirm
+
+### Admin User Management
+*All endpoints below require admin privileges*
+
+#### Get All Users
+```
+GET /users
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+
+#### Create User (Admin)
+```
+POST /users
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**Request Body:**
+```json
+{
+  "firstName": "Ranjit",
+  "lastName": "Kumar",
+  "email": "kanjitkumar@yopmail.com",
+  "password": "Welcome@123",
+  "role": "user"
+}
+```
+**Required Fields:** firstName, lastName, email, password
+**Optional Fields:** role (default: 'user')
+
+#### Get User by ID
+```
+GET /users/:id
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**URL Parameters:**
+- `id`: User's UUID
+
+#### Update User
+```
+PATCH /users/:id
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**URL Parameters:**
+- `id`: User's UUID
+
+**Request Body:**
+```json
+{
+  "firstName": "Ranjit",
+  "lastName": "Kumar",
+  "email": "kanjitkumar@yopmail.com",
+  "role": "admin",
+  "isActive": true
+}
+```
+**Optional Fields:** firstName, lastName, email, role, isActive
+
+#### Delete User
+```
+DELETE /users/:id
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**URL Parameters:**
+- `id`: User's UUID
+
+#### Deactivate User
+```
+PATCH /users/:id/deactivate
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**URL Parameters:**
+- `id`: User's UUID
+
+#### Reactivate User
+```
+PATCH /users/:id/reactivate
+```
+**Headers:**
+```
+Authorization: Bearer <admin_token>
+```
+**URL Parameters:**
+- `id`: User's UUID
 
 ## Environment Variables
 
